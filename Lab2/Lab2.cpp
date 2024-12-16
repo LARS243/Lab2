@@ -12,10 +12,10 @@ private:
     public:
         string town;
         string street;
-        int number_of_house;
-        int type_of_house;
+        string number_of_house;
+        string type_of_house;
         data_of_list* next_data;
-        data_of_list(string town_for_write, string street_for_write, int number_of_houses_for_write, int type_of_houses_for_write)
+        data_of_list(string town_for_write, string street_for_write, string number_of_houses_for_write, string type_of_houses_for_write)
         {
             town = town_for_write;
             street = street_for_write;
@@ -30,7 +30,7 @@ public:
     {
         first_element = nullptr;
     }
-    void insert_town(string town, string street, int number_of_house, int type_of_house)
+    void insert_town(string town, string street, string number_of_house, string type_of_house)
     {
         if (first_element == nullptr)
         {
@@ -67,7 +67,7 @@ int main()
     {
         while (getline(file, message))
         {
-            spisok.insert_town("", "", 0, 0);
+            spisok.insert_town("", "", "", "");
             std::cout << message << std::endl;
         }
     }
