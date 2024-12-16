@@ -24,8 +24,12 @@ private:
             next_data = nullptr;
         }
     };
-    data_of_list* first_element = nullptr;
+    data_of_list* first_element;
 public:
+    list()
+    {
+        first_element = nullptr;
+    }
     void insert_town(string town, string street, int number_of_house, int type_of_house)
     {
         if (first_element == nullptr)
@@ -48,6 +52,7 @@ public:
 
 int main()
 {
+    list spisok;
     setlocale(LC_ALL, "ru_RU.utf8");
     std::string message;
     std::ifstream file;       // поток для чтения
@@ -56,6 +61,7 @@ int main()
     {
         while (std::getline(file, message))
         {
+            spisok.insert_town(nullptr, nullptr, 0, 0);
             std::cout << message << std::endl;
         }
     }
