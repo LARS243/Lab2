@@ -84,14 +84,15 @@ int main()
     list spisok;
     setlocale(LC_ALL, "ru_RU.utf8");
     string message;
+    vector<string> matrix;
     ifstream file; 
     file.open("address_o.csv");
     if (file.is_open())
     {
         while (getline(file, message))
         {
-            spisok.insert_town("", "", "", "");
-            std::cout << message << std::endl;
+            matrix = string_to_vector(message);
+            spisok.insert_town(matrix[0], matrix[1], matrix[2], matrix[3]);
         }
     }
     file.close();
