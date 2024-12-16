@@ -73,7 +73,7 @@ public:
     }
 };
 
-vector<string> string_to_vector(string message) {
+vector<string> string_to_vector(string& message) {
     vector<string> matrix;
     int counter = 0;
     int ln = message.length();
