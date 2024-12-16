@@ -45,7 +45,7 @@ private:
                 void print_all_types()
                 {
                     list_of_type_homes* start = first_type;
-                    cout << start->type << "|" << start->count << "|" << "request: " << start->counters << endl;
+                    cout << start->type << "|" << start->count << " " << "request: " << start->counters << endl;
                 }
 
                 void insert_new_type(string& new_type, string& new_home)
