@@ -1,7 +1,7 @@
 ﻿#include <iostream>
 #include <string>
 #include <fstream>
-#include <locale>
+#include <vector>
 using namespace std;
 
 class list
@@ -49,6 +49,12 @@ public:
         }
     }
 };
+
+vector<string> string_to_vector(string message) {
+    int counter = 0;
+    int ln = message.length();
+
+}
 
 int main()
 {
