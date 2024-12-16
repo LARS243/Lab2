@@ -61,7 +61,7 @@ int main()
     {
         while (std::getline(file, message))
         {
-            spisok.insert_town(nullptr, nullptr, 0, 0);
+            spisok.insert_town("", "", 0, 0);
             std::cout << message << std::endl;
         }
     }
