@@ -68,6 +68,7 @@ public:
                 cout << start->town << "|" << start->street << "|" << start->number_of_house << "|" 
                     << start->type_of_house << "| Повторений: " << start->counter+1;
             }
+            start = start->next_data;
         }
     }
 };
