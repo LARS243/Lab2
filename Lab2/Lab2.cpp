@@ -15,6 +15,7 @@ private:
         string number_of_house;
         string type_of_house;
         data_of_list* next_data;
+        int counter;
         data_of_list(string town_for_write, string street_for_write, string number_of_houses_for_write, string type_of_houses_for_write)
         {
             town = town_for_write;
@@ -22,6 +23,7 @@ private:
             number_of_house = number_of_houses_for_write;
             type_of_house = type_of_houses_for_write;
             next_data = nullptr;
+            counter = 0;
         }
     };
     data_of_list* first_element;
@@ -40,11 +42,19 @@ public:
         else
         {
             data_of_list* start = first_element;
-            data_of_list* new_town = new data_of_list(town, street, number_of_house, type_of_house);
             while (start->next_data != nullptr)
             {
-                start = start->next_data;
+                if (start->town == town and start->street == street and start->type_of_house == type_of_house and start->town == town)
+                {
+                    start->counter += 1;
+                    return;
+                }
+                else
+                {
+                    start = start->next_data;
+                }
             }
+            data_of_list* new_town = new data_of_list(town, street, number_of_house, type_of_house);
             start->next_data = new_town;
         }
     }
