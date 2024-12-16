@@ -58,6 +58,18 @@ public:
             start->next_data = new_town;
         }
     }
+    void print_all_list()
+    {
+        data_of_list* start = first_element;
+        while (start->next_data != nullptr)
+        {
+            if (start->counter > 0)
+            {
+                cout << start->town << "|" << start->street << "|" << start->number_of_house << "|" 
+                    << start->type_of_house << "| Повторений: " << start->counter+1;
+            }
+        }
+    }
 };
 
 vector<string> string_to_vector(string message) {
@@ -96,4 +108,5 @@ int main()
         }
     }
     file.close();
+    spisok.print_all_list();
 }
