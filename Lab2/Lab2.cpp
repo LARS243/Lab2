@@ -10,7 +10,12 @@ int main()
     std::string message;
     std::ifstream file;       // поток для чтения
     file.open("address_o.csv"); // окрываем файл для чтения
-    for (file >> message; !file.eof(); file >> message) {
-        cout << message << "\n";
+    if (file.is_open())
+    {
+        while (std::getline(file, message))
+        {
+            std::cout << message << std::endl;
+        }
     }
+    file.close();     // закрываем файл
 }
