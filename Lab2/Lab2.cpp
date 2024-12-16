@@ -51,9 +51,22 @@ public:
 };
 
 vector<string> string_to_vector(string message) {
+    vector<string> matrix;
     int counter = 0;
     int ln = message.length();
-
+    string new_object = "";
+    string point_with_sealed = ";";
+    for (int i = 0; i < ln; i++) {
+        if (message[i] == point_with_sealed[0]) {
+            matrix.push_back(new_object);
+            new_object = "";
+        }
+        else {
+            new_object += message[i];
+        }
+    }
+    matrix.push_back(new_object);
+    return matrix;
 }
 
 int main()
