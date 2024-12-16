@@ -7,15 +7,15 @@ using namespace std;
 int main()
 {
     setlocale(LC_ALL, "ru_RU.utf8");
-    std::string message;
-    std::ifstream file;       // поток для чтения
-    file.open("address_o.csv"); // окрываем файл для чтения
+    string message;
+    ifstream file; 
+    file.open("address_o.csv");
     if (file.is_open())
     {
-        while (std::getline(file, message))
+        while (getline(file, message))
         {
-            std::cout << message << std::endl;
+            cout << message << endl;
         }
     }
-    file.close();     // закрываем файл
+    file.close();
 }
