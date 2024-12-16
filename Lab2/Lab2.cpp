@@ -11,5 +11,6 @@ int main()
     file.open("address_o.csv"); // окрываем файл для чтения
     for (file >> message; !file.eof(); file >> message) {
         cout << message << "\n";
+        //cout << endl;
     }
 }
