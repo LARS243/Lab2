@@ -189,7 +189,7 @@ public:
         list_of_towns* start = first_town;
         while (start != nullptr)
         {
-            cout << start->town << "|";
+            cout << start->town << endl;
             start->print_all_symbols();
             cout << endl;
             start = start->next_town;
