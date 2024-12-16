@@ -16,7 +16,7 @@ private:
         string type_of_house;
         data_of_list* next_data;
         int counter;
-        data_of_list(string town_for_write, string street_for_write, string number_of_houses_for_write, string type_of_houses_for_write)
+        data_of_list(string& town_for_write, string& street_for_write, string& number_of_houses_for_write, string& type_of_houses_for_write)
         {
             town = town_for_write;
             street = street_for_write;
@@ -32,7 +32,7 @@ public:
     {
         first_element = nullptr;
     }
-    void insert_town(string town, string street, string number_of_house, string type_of_house)
+    void insert_town(string& town, string& street, string& number_of_house, string& type_of_house)
     {
         if (first_element == nullptr)
         {
