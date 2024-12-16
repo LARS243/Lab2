@@ -66,7 +66,7 @@ public:
             if (start->counter > 0)
             {
                 cout << start->town << "|" << start->street << "|" << start->number_of_house << "|" 
-                    << start->type_of_house << "| Повторений: " << start->counter+1;
+                    << start->type_of_house << "| repeats: " << start->counter+1 << endl;
             }
             start = start->next_data;
         }
